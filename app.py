@@ -313,9 +313,7 @@ if uploaded_file is not None:
 
     with col2:
         st.subheader("Status")
-        if st.button(
-            "Iniciar Análise Híbrida", type="primary", use_container_width=True
-        ):
+        if st.button("Iniciar Análise", type="primary", use_container_width=True):
             # 1. Salvar o arquivo upado temporariamente
             tfile = tempfile.NamedTemporaryFile(delete=False, suffix=".mp4")
             tfile.write(uploaded_file.read())

@@ -1,14 +1,6 @@
-# deepfake-video-detector
+# Deepfake Video Detector – Sistema de Detecção de Manipulações Faciais
 
-Aqui está o **README.md** exatamente no formato Markdown puro, pronto para ser copiado e colocado no repositório GitHub sem ajustes adicionais.
-
----
-
-# README.md
-
-# Deepfake Video Detector – Sistema Híbrido de Detecção de Manipulações Faciais
-
-Este projeto implementa um sistema híbrido avançado para detecção de deepfakes em imagens e vídeos.
+Este projeto implementa um sistema híbrido  para detecção de deepfakes em imagens e vídeos.
 A solução combina três abordagens distintas:
 
 1. Um modelo CNN treinado diretamente em imagens do dataset RVF10K.
