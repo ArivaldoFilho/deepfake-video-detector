@@ -170,7 +170,7 @@ models/
 ### 5.3 Executar a Interface Streamlit
 
 ```
-streamlit run detect_video-v2.py
+streamlit run app.py
 ```
 
 Acesse:
