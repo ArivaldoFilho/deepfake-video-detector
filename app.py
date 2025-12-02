@@ -100,6 +100,9 @@ cnn_model, det_model, stack_model, scaler, face_cascade = load_models()
 # =====================================================================
 # FUNÇÕES AUXILIARES (Extração de Features)
 # =====================================================================
+
+
+# detecta o rosto em uma imagem em escala de cinza e retorna o recorte do rosto junto com sua bounding box
 def extract_face_bbox(gray):
     faces = face_cascade.detectMultiScale(gray, 1.1, 5, minSize=(30, 30))
     if len(faces) == 0:
@@ -109,6 +112,7 @@ def extract_face_bbox(gray):
     return (x, y, w, h), face_img
 
 
+# extrair textura da imagem.
 def lbp_features(img):
     img = img.astype(np.uint8)
     h, w = img.shape
@@ -133,6 +137,7 @@ def lbp_features(img):
     return hist
 
 
+# extrai um conjunto de características matemáticas e estatísticas do rosto em escala de cinza. Essas características (features) são usadas pelo modelo Logistic Regression para decidir se o frame é real ou fake.
 def extract_deterministic_features(face_gray):
     mean_intensity = np.mean(face_gray)
     std_intensity = np.std(face_gray)
